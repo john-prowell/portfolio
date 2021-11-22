@@ -1,0 +1,29 @@
+.skills {
+  &__list {
+    padding: 2rem 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  &__icon {
+    text-align: center;
+    margin: 0 auto 0.8rem auto;
+
+    & svg {
+      color: $blue !important;
+      fill: $blue;
+      width: 4.5rem !important;
+      height: 4.5rem !important;
+    }
+  }
+
+  &__name {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}

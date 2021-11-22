@@ -1,0 +1,26 @@
+.section__header {
+  color: $light-grey;
+  background: linear-gradient(-62deg, $blue, #49acf8);
+  padding: 2rem 0;
+  text-align: center;
+
+  @include breakpoint(md) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @include breakpoint(sm) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.section__heading {
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.section__heading--sub {
+  font-size: 1rem;
+}

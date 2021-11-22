@@ -1,0 +1,65 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import '../../node_modules/bootstrap/scss/functions';
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+// 4. Include any optional Bootstrap components as you like
+@import '../../node_modules/bootstrap/scss/root';
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/type';
+@import '../../node_modules/bootstrap/scss/images';
+@import '../../node_modules/bootstrap/scss/containers';
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/card';
+@import '../../node_modules/bootstrap/scss/utilities';
+@import '../../node_modules/bootstrap/scss/helpers';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// 5. Add additional custom code here
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/base';
+
+// layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// Components
+@import 'components/section-header';
+@import 'components/button';
+
+// Homepage Sections
+@import 'pages/home/hero';
+@import 'pages/home/about';
+@import 'pages/home/skills';
+@import 'pages/home/portfolio';
+@import 'pages/home/contact';
+
+// /**
+//  * WordPress customizationn
+//  */
+/* If WP-Adminbar is visible */
+body.admin-bar {
+  #header.fixed-top {
+    top: 32px;
+  }
+
+  .edit-link a {
+    color: #fff !important;
+    font-weight: normal !important;
+    text-decoration: none !important;
+
+    &::before {
+      content: '\270E';
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+// MEDIA QUERY MANAGER
+// BOOTSTRAP BREAK POINTS
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == xs {
+    @media only screen and (max-width: 575px) {
+      @content;
+    }
+  }
+  @if $breakpoint == sm {
+    @media only screen and (min-width: 576px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xxl {
+    @media only screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+// CUSTOM BREAK POINTS
+
+@mixin breakpoint-min($query) {
+  @media only screen and (min-width: + $query) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max($query) {
+  @media (max-width: + $query) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-max($query, $query2) {
+  @media only screen and (min-width: + $query) and (max-width: + $query2) {
+    @content;
+  }
+}

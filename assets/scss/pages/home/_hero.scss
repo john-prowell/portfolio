@@ -1,0 +1,47 @@
+// Hero Section - Homepage
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url(../../assets/images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $light-grey;
+  position: relative;
+
+  @include breakpoint(md) {
+    height: 100vh;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__heading {
+    color: $blue;
+    margin-bottom: 1.25rem;
+    font-size: 5rem;
+    line-height: 1;
+
+    @include breakpoint(sm) {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    &--sub {
+      margin-bottom: 1.75rem;
+      @include breakpoint(sm) {
+        font-size: 2.23rem;
+      }
+    }
+  }
+}

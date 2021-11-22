@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font: 400 16px / 1.4 $text-font-primary;
+  color: $text-color;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+a {
+  &:link,
+  &:visited,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    color: $blue;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $text-font-secondary;
+  margin: 0;
+}

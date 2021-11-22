@@ -1,0 +1,95 @@
+#header {
+  height: 6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: transparent;
+  transition: 0.5s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.scrolled {
+    background-color: $dark-grey;
+    transition: 0.5s;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(md) {
+      justify-content: center;
+    }
+
+    &__link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $light-grey;
+      transition: all 0.3s;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      &.active {
+        background-color: $blue;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: $blue;
+        }
+      }
+
+      // @include breakpoint-max(767px) {
+      //   &:after {
+      //     content: '';
+      //     background: $blue;
+      //     display: block;
+      //     position: absolute;
+      //     padding-top: 300%;
+      //     padding-left: 350%;
+      //     margin-left: -20px !important;
+      //     margin-top: -120%;
+      //     opacity: 0;
+      //     transition: all 0.8s;
+      //   }
+
+      //   &:active:after {
+      //     padding: 0;
+      //     margin: 0;
+      //     opacity: 1;
+      //     transition: 0s;
+      //   }
+      // }
+
+      @include breakpoint(md) {
+        padding: 1rem 2rem;
+      }
+    }
+
+    &__icon {
+      fill: $light-grey;
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+}
+
+// .logo {
+//   width: 5.5rem;
+//   height: 5.5rem;
+//   fill: $light-grey;
+//   margin-left: 2rem;
+// }
