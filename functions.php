@@ -149,8 +149,8 @@ function graphic_post_type() {
 add_action( 'init', 'graphic_post_type', 0 );
 
 
-
-
+/* Removes Wordpress Upload Image Scaling */
+add_filter( 'big_image_size_threshold', '__return_false' );
 
 
 /* Displays template name on bottom of page for dev purposes */
