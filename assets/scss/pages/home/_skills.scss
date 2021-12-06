@@ -1,18 +1,18 @@
 .skills {
   &__list {
-    padding: 2rem 0;
+    padding: 2rem 0 1rem;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   &__icon {
     text-align: center;
-    margin: 0 auto 0.8rem auto;
+    margin: 0 auto 0.5rem;
 
     & svg {
       color: $blue !important;
@@ -25,5 +25,6 @@
   &__name {
     text-align: center;
     font-size: 1.2rem;
+    margin-bottom: 0;
   }
 }

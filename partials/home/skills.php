@@ -62,7 +62,7 @@
         <p class="skills__name">React</p>
       </div>
 
-      <div class="col-6 col-md-4 col-lg-3 skills__item">
+      <!-- <div class="col-6 col-md-4 col-lg-3 skills__item">
         <div class="skills__icon">
           <svg>
             <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#node"></use>
@@ -78,7 +78,7 @@
           </svg>
         </div>
         <p class="skills__name">MongoDB</p>
-      </div>
+      </div> -->
 
       <div class="col-6 col-md-4 col-lg-3 skills__item">
         <div class="skills__icon">
