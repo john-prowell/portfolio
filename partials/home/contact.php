@@ -32,8 +32,10 @@
       </div> -->
 
       <div class="col-md-8 offset-md-2 contact__form">
-        <?php echo do_shortcode('[forminator_form id="84"]') ?>
+        <?php $code = get_field('contact_code');
+        echo do_shortcode($code);
+        ?>
       </div>
     </div>
   </div>
-</section>
+</section>  
