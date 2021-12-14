@@ -6,7 +6,7 @@
           <!-- <a href="https://github.com/john-prowell" target="_blank"
             ><svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#github-logo"></use></svg
           ></a> -->
-          <a href="https://www.linkedin.com/in/john-prowell/">
+          <a href="https://www.linkedin.com/in/john-prowell/" target="_blank">
             <svg><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#linkedin-logo"></use></svg
           ></a>
         </div>
