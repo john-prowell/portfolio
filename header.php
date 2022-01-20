@@ -15,9 +15,6 @@
       gtag('config', 'G-YZ1TJC5J4H');
     </script>
 
-
-    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:700" rel="stylesheet" />
-
     <title><?php echo get_bloginfo( 'name' );?> </title>
     <?php wp_head(); ?>
   </head>
