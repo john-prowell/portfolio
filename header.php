@@ -18,7 +18,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:700" rel="stylesheet" />
 
-    <title><?php the_title(); ?></title>
+    <title><?php echo get_bloginfo( 'name' );?> </title>
     <?php wp_head(); ?>
   </head>
 
