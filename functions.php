@@ -1,32 +1,22 @@
 <?php
 
-// <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
-// <script src="js/jquery.event.move.js" type="text/javascript"></script>
-// <script src="js/jquery.twentytwenty.js" type="text/javascript"></script>
-// <link rel="stylesheet" href="css/twentytwenty.css" type="text/css" media="screen" />
-
 function load_styles() {
     wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '5.1.3');
     wp_enqueue_style( 'twenty-twenty-styles', get_template_directory_uri() . '/assets/css/twentytwenty.css' , array(), '1.0.0');
-
     wp_enqueue_style( 'custom-styles', get_template_directory_uri() . '/assets/css/main.css' , array(), '1.0.0');
     wp_enqueue_style( 'custom-styles-map', get_template_directory_uri() . '/assets/css/main.css.map', array(), '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'load_styles');
 
-
 function load_scripts() {   
 
-	// Smooth Scroll
+		// Smooth Scroll
     wp_enqueue_script('smooth_scroll_scripts', get_template_directory_uri() . '/assets/js/smooth-scroll.polyfills.js', array('jquery'), '16.1.4', true);
-
 		// TwentyTwenty Image Comparison Slider		
-		wp_enqueue_script('jquery-event-move_scripts', get_template_directory_uri() . '/assets/js/jquery.event.move.js', array('jquery'), '1.0', true);
+		wp_enqueue_script('jquery-event-move_scripts', get_template_directory_uri() . '/assets/js/jquery.event.move.js', array('jquery'), '2.0', true);
 		wp_enqueue_script('twentytwenty_scripts', get_template_directory_uri() . '/assets/js/jquery.twentytwenty.js', array('jquery'), '1.0', true);
-
 		// Bootstrap
 		wp_enqueue_script('bootstrap_scripts', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array('jquery'), '5.1.3', true);
-
 		// Custom Scripts
     wp_enqueue_script('custom_scripts', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0', true);
 }
