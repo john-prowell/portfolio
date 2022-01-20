@@ -6,7 +6,7 @@
 // <link rel="stylesheet" href="css/twentytwenty.css" type="text/css" media="screen" />
 
 function load_styles() {
-    // wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '5.1.3');
+    wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '5.1.3');
     wp_enqueue_style( 'twenty-twenty-styles', get_template_directory_uri() . '/assets/css/twentytwenty.css' , array(), '1.0.0');
 
     wp_enqueue_style( 'custom-styles', get_template_directory_uri() . '/assets/css/main.css' , array(), '1.0.0');
