@@ -1,11 +1,11 @@
 .footer {
-  padding: 3rem 0;
+  padding: 2rem 0;
   background-color: $dark-grey;
   text-align: center;
   color: $light-grey;
 
   @include breakpoint(md) {
-    padding: 4rem 0;
+    padding: 6rem 0;
   }
 
   &__social {
