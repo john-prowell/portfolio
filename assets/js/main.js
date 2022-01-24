@@ -13,20 +13,6 @@ const headerScroll = () => {
   } else header.classList.remove('scrolled');
 };
 
-// const navScroll = () => {
-//   let scrollpos = window.scrollY;
-//   const nav = document.getElementById('nav');
-//   const navLinks = nav.getElementsByClassName('nav__link');
-//   if (scrollpos <= 75) {
-//     Array.from(navLinks).forEach(function (element) {
-//       element.classList.remove('active');
-//       console.log('removed');
-//       // element.className.replace('active', '');
-//     });
-//   }
-//   console.log(scrollpos);
-// };
-
 const scrollToTop = () => {
   const backToTop = document.getElementById('backToTop');
   if (
@@ -41,28 +27,13 @@ const scrollToTop = () => {
 
 window.onscroll = () => {
   headerScroll();
-  // navScroll();
   scrollToTop();
 };
 
-// nav add active class on link click
-
-// const nav = document.getElementById('nav');
-// const navLinks = nav.getElementsByClassName('nav__link');
-// for (let i = 0; i < navLinks.length; i++) {
-//   navLinks[i].addEventListener('click', function () {
-//     var current = document.getElementsByClassName('active');
-//     if (current.length > 0) {
-//       current[0].className = current[0].className.replace(' active', '');
-//     }
-//     this.className += ' active';
-//     console.log('added');
-//   });
-// }
+/* Highlight top nav links when corresponding section is scrolled to */
 
 // Get all sections that have an ID defined except #hero
 const sections = document.querySelectorAll('section[id]:not(#hero)');
-// console.log(sections);
 
 // Add an event listener listening for scroll
 window.addEventListener('scroll', navHighlighter);
@@ -76,7 +47,6 @@ function navHighlighter() {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 100;
     sectionId = current.getAttribute('id');
-    // console.log(sectionId);
 
     /*
     - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
