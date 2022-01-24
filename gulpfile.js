@@ -3,18 +3,28 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const purgecss = require('gulp-css-purge');
+const purgecss = require('gulp-purgecss');
 const browsersync = require('browser-sync').create();
+const decomment = require('gulp-decomment');
 
 // Sass Task
 function scssTask() {
-  return (
-    src('./assets/scss/**/*.scss', { sourcemaps: true })
-      .pipe(sass().on('error', sass.logError))
-      // .pipe(purgecss({ content: ['./**/*.php'] }))
-      .pipe(postcss([autoprefixer(), cssnano()]))
-      .pipe(dest('./assets/css', { sourcemaps: '.' }))
-  );
+  return src('./assets/scss/**/*.scss', { sourcemaps: true })
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(dest('./assets/css', { sourcemaps: '.' }));
+}
+
+// function jsTask() {
+//   return src('./assets/js/**/*.js')
+//     .pipe(decomment({ trim: true }))
+//     .pipe(dest('./assets/js'));
+// }
+
+function purgecssTask() {
+  return src('./assets/css/main.css')
+    .pipe(purgecss({ content: ['./**/*.php'], safelist: ['scrolled'] }))
+    .pipe(dest('./assets/css'));
 }
 
 // Browser Sync
@@ -37,4 +47,4 @@ function watchTask() {
 }
 
 // Default Gulp Task
-exports.default = series(scssTask, browsersyncServe, watchTask);
+exports.default = series(scssTask, purgecssTask, browsersyncServe, watchTask);
