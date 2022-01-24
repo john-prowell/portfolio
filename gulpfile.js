@@ -23,7 +23,9 @@ function scssTask() {
 
 function purgecssTask() {
   return src('./assets/css/main.css')
-    .pipe(purgecss({ content: ['./**/*.php'], safelist: ['scrolled'] }))
+    .pipe(
+      purgecss({ content: ['./**/*.php'], safelist: ['scrolled', 'active'] })
+    )
     .pipe(dest('./assets/css'));
 }
 
