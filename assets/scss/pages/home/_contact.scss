@@ -53,13 +53,11 @@
 
   &__form {
     background-color: $dark-grey;
-    padding: 2.25rem;
-    // border-top-right-radius: 0.5rem;
-    // border-bottom-right-radius: 0.5rem;
+    padding: 2.25rem 1rem;
 
-    // display: flex;
-    // flex-direction: column;
-    // flex-basis: 60%;
+    @include breakpoint(md) {
+      padding: 2.25rem;
+    }
 
     & > * {
       border-radius: 0.35rem;
