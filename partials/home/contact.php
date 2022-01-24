@@ -4,7 +4,7 @@
   <div class="section__header">
     <h2 class="section__heading">Contact</h2>
     <div class="section__heading--sub">
-      Have a question or want to work together?
+    If you wanna get in touch regarding a project or full-time employment, please fill out the awesome form below.
     </div>
   </div>
 
