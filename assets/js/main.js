@@ -1,7 +1,8 @@
 // Smooth Scroll
 const scroll = new SmoothScroll('a[href*="#"]', {
   // offset: 95
-  header: '[data-scroll-header]'
+  header: '[data-scroll-header]',
+  easing: 'linear'
 });
 
 // Fixed header background color change on scroll
