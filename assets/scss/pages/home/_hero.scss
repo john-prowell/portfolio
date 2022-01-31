@@ -3,7 +3,10 @@
 .hero {
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+  background-image: linear-gradient(
+      rgba(104, 173, 206, 0.25),
+      rgba(0, 0, 0, 0.5)
+    ),
     url(../../assets/images/ad_background.jpg);
   background-size: cover;
   background-position: center;
@@ -31,7 +34,7 @@
     margin-bottom: 1.25rem;
     font-size: 5rem;
     line-height: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 
     @include breakpoint(sm) {
       display: block;
@@ -40,9 +43,11 @@
 
     &--sub {
       margin-bottom: 1.75rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
-      @include breakpoint(sm) {
-        font-size: 2.23rem;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+      font-size: 1.75rem;
+
+      span {
+        color: $blue;
       }
     }
   }

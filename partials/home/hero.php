@@ -6,9 +6,9 @@
         <div class="hero__content">                
           <h1 class="hero__heading">John Prowell</h1>
           <h3 class="hero__heading--sub">
-          Digital Marketing | Web Development | Graphic Design 
+          Digital Marketer <span>|</span> Web Developer
           </h3>
-          <a href="#portfolio" class="btn-blue">See my work</a>          
+          <a href="#contact" class="btn-blue">Contact Now</a>          
         </div>        
       </div>
     </div>
