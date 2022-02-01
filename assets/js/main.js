@@ -1,9 +1,13 @@
 // Smooth Scroll
-const scroll = new SmoothScroll('a[href*="#"]', {
-  // offset: 95
-  header: '[data-scroll-header]',
-  easing: 'linear'
-});
+// const scroll = new SmoothScroll('a[href*="#", data-easing="linear"]', {
+//   // offset: 95
+//   header: '[data-scroll-header]',
+//   easing: 'linear'
+// });
+
+var defaultDuration = 777; // ms
+var edgeOffset = 55; // px
+zenscroll.setup(defaultDuration, edgeOffset);
 
 // Fixed header background color change on scroll
 const headerScroll = () => {

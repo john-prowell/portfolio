@@ -10,8 +10,8 @@ add_action('wp_enqueue_scripts', 'load_styles');
 
 function load_scripts() {   
 
-		// Smooth Scroll
-    wp_enqueue_script('smooth_scroll_scripts', get_template_directory_uri() . '/assets/js/smooth-scroll.polyfills.js', array('jquery'), '16.1.4', true);
+		// Zenscroll
+    wp_enqueue_script('zenscroll_scripts', get_template_directory_uri() . '/assets/js/zenscroll-min.js', array('jquery'), '4.0.2', true);
 		// TwentyTwenty Image Comparison Slider		
 		wp_enqueue_script('jquery-event-move_scripts', get_template_directory_uri() . '/assets/js/jquery.event.move.js', array('jquery'), '2.0', true);
 		wp_enqueue_script('twentytwenty_scripts', get_template_directory_uri() . '/assets/js/jquery.twentytwenty.js', array('jquery'), '1.0', true);
