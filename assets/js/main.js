@@ -6,7 +6,7 @@
 // });
 
 var defaultDuration = 777; // ms
-var edgeOffset = 64; // px
+var edgeOffset = 84; // px
 zenscroll.setup(defaultDuration, edgeOffset);
 
 // Fixed header background color change on scroll
