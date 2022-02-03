@@ -1,10 +1,4 @@
-// Smooth Scroll
-// const scroll = new SmoothScroll('a[href*="#", data-easing="linear"]', {
-//   // offset: 95
-//   header: '[data-scroll-header]',
-//   easing: 'linear'
-// });
-
+// Zenscroll
 var defaultDuration = 777; // ms
 var edgeOffset = 84; // px
 zenscroll.setup(defaultDuration, edgeOffset);
