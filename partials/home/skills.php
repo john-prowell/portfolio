@@ -1,112 +1,81 @@
 <section id="skills" class="skills">
   <div class="section__header">
     <h2 class="section__heading">My Skills</h2>
-    <div class="section__heading--sub">
-      Brief list of skills
-    </div>
+    <p class="section__heading--sub">
+      Brief list of skills & certifications.
+    </p>
   </div>
-  <div class="container">
+
+
+<div class="container">
+  <h4 class="text-center my-3">Certifications</h4>
+    <div class="d-flex justify-content-between flex-wrap">
+
+  <?php
+
+// Check rows exists.
+if( have_rows('certifications') ):
+  
+  // Loop through rows.
+  while( have_rows('certifications') ) : the_row();
+
+        // Load sub field value.
+        $certName = get_sub_field('cert_name');
+        $certIcon = get_sub_field('cert_icon');
+        $certLink =  get_sub_field('cert_link');
+        // Do something...
+        ?>
+
+        <div class="skills__certs--name mb-3">
+          <div class="skills__certs--icon">
+            <svg>
+              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#<?php echo $certIcon ?>"></use>
+            </svg>
+            <a class="skills__name" href="<?php echo esc_url($certLink) ?>" target="_blank">
+              <?php echo $certName ?>
+            </a>
+          </div>
+        </div>        
+        
+        <?php    
+    endwhile;
+    endif;
+    ?>
+  </div>
+  <hr>
+</div>
+
+
+<div class="container">    
+  <h4 class="text-center">Skills</h4>
     <div class="row skills__list">
 
-      <div class="col-6 col-md-4 col-lg-3 skills__item">
-        <div class="skills__icon">
-          <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#html5"></use>
-          </svg>
-        </div>
-        <p class="skills__name">HTML</p>
-      </div>
+<?php
+// Check rows exists.
+if( have_rows('skill_list') ):
+  
+  // Loop through rows.
+  while( have_rows('skill_list') ) : the_row();
+
+        // Load sub field value.
+        $skillName = get_sub_field('skill_name');
+        $skillIcon = get_sub_field('skill_icon');  
+        // Do something...
+        ?>
 
       <div class="col-6 col-md-4 col-lg-3 skills__item">
         <div class="skills__icon">
           <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#css3-alt"></use>
+            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#<?php echo $skillIcon ?>"></use>
           </svg>
         </div>
-        <p class="skills__name">CSS</p>
+        <p class="skills__name"><?php echo $skillName ?></p>
       </div>
 
-      <div class="col-6 col-md-4 col-lg-3 skills__item">
-        <div class="skills__icon">
-          <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#sass"></use>
-          </svg>
-        </div>
-        <p class="skills__name">SASS</p>
-      </div>
-
-      <div class="col-6 col-md-4 col-lg-3 skills__item">
-        <div class="skills__icon">
-          <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#bootstrap"></use>
-          </svg>
-        </div>
-        <p class="skills__name">Bootstrap</p>
-      </div>
-
-      <div class="col-6 col-md-4 col-lg-3 skills__item">
-        <div class="skills__icon">
-          <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#js"></use>
-          </svg>
-        </div>
-        <p class="skills__name">Javascript</p>
-      </div>
-
-      <div class="col-6 col-md-4 col-lg-3 skills__item">
-        <div class="skills__icon">
-          <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#react"></use>
-          </svg>
-        </div>
-        <p class="skills__name">React</p>
-      </div>
-
-      <!-- <div class="col-6 col-md-4 col-lg-3 skills__item">
-        <div class="skills__icon">
-          <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#node"></use>
-          </svg>
-        </div>
-        <p class="skills__name">Node</p>
-      </div>
-
-      <div class="col-6 col-md-4 col-lg-3 skills__item">
-        <div class="skills__icon">
-          <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#mongodb"></use>
-          </svg>
-        </div>
-        <p class="skills__name">MongoDB</p>
-      </div> -->
-
-      <div class="col-6 col-md-4 col-lg-3 skills__item">
-        <div class="skills__icon">
-          <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#wordpress"></use>
-          </svg>
-        </div>
-        <p class="skills__name">Wordpress</p>
-      </div>
-
-      <div class="col-6 col-md-4 col-lg-3 skills__item">
-        <div class="skills__icon">
-          <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#photoshop"></use>
-          </svg>
-        </div>
-        <p class="skills__name">Photoshop</p>
-      </div>
-
-      <div class="col-6 col-md-4 col-lg-3 skills__item">
-        <div class="skills__icon">
-          <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#illustrator"></use>
-          </svg>
-        </div>
-        <p class="skills__name">Illustrator</p>
-      </div>
-        
+      <?php    
+    endwhile;
+    endif;
+    ?>
     </div>
-  </div>
+</div>  
 </section>
