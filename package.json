@@ -22,7 +22,6 @@
     "last 2 versions"
   ],
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
     "svg-sprite-generator": "0.0.7"
   }
 }
