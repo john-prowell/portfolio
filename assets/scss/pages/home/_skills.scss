@@ -2,12 +2,24 @@
   &__certs {
     &--icon {
       svg {
-        margin-right: 0.5rem;
+        margin-right: 0.3rem;
         color: $blue !important;
         fill: $blue;
         width: 1.5rem !important;
         height: 1.5rem !important;
       }
+    }
+
+    a {
+      color: $text-color;
+      transition: color 0s ease;
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    &--name {
+      font-size: 1.1rem;
     }
   }
 

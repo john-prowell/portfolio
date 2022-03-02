@@ -8,7 +8,7 @@
 
 
 <div class="container">
-  <h4 class="text-center my-3">Certifications</h4>
+  <h4 class="text-center my-4">Certifications</h4>
     <div class="d-flex justify-content-between flex-wrap">
 
   <?php
@@ -26,12 +26,12 @@ if( have_rows('certifications') ):
         // Do something...
         ?>
 
-        <div class="skills__certs--name mb-3">
+        <div class="skills__certs mb-3">
           <div class="skills__certs--icon">
             <svg>
               <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#<?php echo $certIcon ?>"></use>
             </svg>
-            <a class="skills__name" href="<?php echo esc_url($certLink) ?>" target="_blank">
+            <a class="skills__certs--name" href="<?php echo esc_url($certLink) ?>" target="_blank">
               <?php echo $certName ?>
             </a>
           </div>
