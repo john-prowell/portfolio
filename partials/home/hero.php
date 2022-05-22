@@ -6,7 +6,7 @@
         <div class="hero__content">                
           <h1 class="hero__heading">John Prowell</h1>
           <h3 class="hero__heading--sub">
-          Digital Marketer <span>|</span> Web Developer
+          <?php the_field('hero_h3')?>
           </h3>
           <a href="#contact" class="btn-blue">Contact Now</a>          
         </div>        
