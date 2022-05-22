@@ -1,4 +1,20 @@
 .skills {
+  &__dmarketing {
+    background-color: $light-grey;
+    padding: 1.5rem;
+
+    h4 {
+      color: $blue;
+    }
+
+    &--ppc {
+      img {
+        max-width: 2rem;
+        max-height: 2rem;
+      }
+    }
+  }
+
   &__certs {
     &--icon {
       svg {
