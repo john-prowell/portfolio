@@ -53,10 +53,6 @@ if( have_rows('certifications') ):
   <hr>
 </div>
 
-<div class="container">
-  <div class="row">
-    <h4 class="text-center">Example PPC Campaign</h4>
-
     <?php
 
 // Check rows exists.
@@ -80,6 +76,10 @@ if( have_rows('dm_files') ):
         // var_dump($file);    
         // Do something...
         ?>
+
+<div class="container">
+  <div class="row">
+    <h4 class="text-center">Example PPC Campaign</h4>
 
         <div class="skills__dmarketing--ppc d-flex justify-content-center mt-3">
           <a class="d-flex" href="<?php echo esc_attr($url); ?>" title="<?php echo esc_attr($title); ?>">
