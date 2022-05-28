@@ -6,18 +6,19 @@
     </p>
   </div>
 
-  <div class="container-fluid skills__dmarketing">
-    <div class="row">
-      <div class="col-12">
-      <h4 class="text-center">Digital Marketing</h4>        
+  <div class="skills__dmarketing">
+    <div class="container-fluid skills__dmarketing--heading">
+      <div class="row">
+        <div class="col-12">
+        <h4 class="text-center">Digital Marketing</h4>        
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="container">
+  <div class="container my-4">
     <div class="row">
-      <h5 class="text-center my-4">Certifications</h5>      
-    <div class="d-flex justify-content-between flex-wrap">
+      <h5 class="text-center mb-3">Certifications</h5>      
+      <div class="d-flex justify-content-between flex-wrap">
 
   <?php
 // Check rows exists.
@@ -33,8 +34,8 @@ if( have_rows('certifications') ):
     // Do something...
     ?>
 
-    <div class="skills__certs mb-3">
-      <div class="skills__certs--icon">
+    <div class="skills__dmarketing-certs mb-3">
+      <div class="skills__dmarketing-certs--icon">
         <svg>
           <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#<?php echo $certIcon ?>"></use>
         </svg>
@@ -50,45 +51,40 @@ if( have_rows('certifications') ):
     ?>
 
   </div>
-  <hr>
 </div>
+  </div>
 
-    <?php
-
+<?php
 // Check rows exists.
-if( have_rows('dm_files') ):
-  
-  // Loop through rows.
-  while( have_rows('dm_files') ) : the_row();
-  
-        // Load sub field value.
-        $file = get_sub_field('dm_file');
-        $url = $file['url'];
-        $title = $file['title'];
-        $caption = $file['caption'];
-        $icon = $file['icon'];
-        $id = $file['id'];
-        $mime = $file['mime_type'];
-        
-        if ($mime === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
-          $icon = get_template_directory_uri() . '/assets/images/xlsx.svg';
-        }
-        // var_dump($file);    
-        // Do something...
-        ?>
+if( have_rows('dm_files') ): ?>
 
-<div class="container">
+<div class="container skills__dmarketing--examples mt-3">
   <div class="row">
-    <h4 class="text-center">Example PPC Campaign</h4>
+    <h5 class="text-center mb-3">Example Campaign</h5>
 
-        <div class="skills__dmarketing--ppc d-flex justify-content-center mt-3">
-          <a class="d-flex" href="<?php echo esc_attr($url); ?>" title="<?php echo esc_attr($title); ?>">
-            <img class="pe-2" src="<?php echo esc_attr($icon); ?>" />
-            <span><?php echo esc_html($title); ?></span>
-          </a>       
-        </div>
-        
-        <hr>
+<?php  
+  // Loop through rows.
+  while( have_rows('dm_files') ) : the_row();  
+  // Do something...
+
+$link = get_sub_field('dm_file_link');
+
+if( $link ): 
+    $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+    ?>
+   
+      <a class="d-flex justify-content-center" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+      
+<?php endif; ?>
+
+    <!-- <div class="skills__dmarketing--ppc d-flex justify-content-center mt-3">
+      <a class="d-flex" href="<?php echo esc_attr($url); ?>" title="<?php echo esc_attr($title); ?>">
+        <img class="pe-2" src="<?php echo esc_attr($icon); ?>" />
+        <span><?php echo esc_html($title); ?></span>
+      </a>       
+    </div> -->
 
   <?php    
    endwhile;
@@ -97,11 +93,21 @@ if( have_rows('dm_files') ):
     
     </div>
   </div>
-</div>  
+
+</div> <!--skills__dmarketing -->
+
+  
+
+<div class="container-fluid skills__web mb-3">
+    <div class="row">
+      <div class="col-12">
+      <h4 class="text-center">Web Development</h4>        
+      </div>
+    </div>
+  </div>
 
 
-<div class="container">    
-  <h4 class="text-center">Skills</h4>
+<div class="container">      
   <div class="row skills__list">
     
     <?php
