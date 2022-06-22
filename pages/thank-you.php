@@ -1,6 +1,8 @@
-<!-- Contact Thank You Page -->
-
-<?php
+<?php 
+/*
+ * Template Name: Contact Form Thank You
+ * Description: Page redirected to after successful contact form submission.
+*/ 
 get_header(); ?>
 
 <h1>Thank you! Your Awesome! <i>Seriously.</i></h1>
