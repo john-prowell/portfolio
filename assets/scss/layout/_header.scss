@@ -18,6 +18,10 @@
     transition: 0.5s;
   }
 
+  &.page-nav {
+    background-color: $dark-grey;
+  }
+
   .nav {
     display: flex;
     align-items: center;
