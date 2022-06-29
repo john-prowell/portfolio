@@ -15,6 +15,30 @@
       </div>
     </div>
 
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-12">          
+            <h5 class="text-center mb-3">Experience</h5>
+            <?php 
+            // Check rows exists.
+            if( have_rows('dm_experience') ): ?>
+            <ul>
+            <?php
+            // Loop through rows.
+            while( have_rows('dm_experience') ) : the_row();  
+              // Load sub field value.
+              $expItem = get_sub_field('dm_exp_item');
+              // Do something...
+              ?>        
+            <li><?php echo $expItem ?></li>
+            <?php    
+            endwhile;?>                
+          </ul>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+
   <div class="container my-4">
     <div class="row">
       <h5 class="text-center mb-3">Certifications</h5>      
