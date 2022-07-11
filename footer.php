@@ -11,7 +11,7 @@
           ></a>
         </div>
         <div class="footer__links">          
-          <a href="#about" class="footer__link">About </a><span>|</span>
+          <a href="<?php get_site_url();?>/#about" class="footer__link">About </a><span>|</span>
           <a href="#skills" class="footer__link">Skills </a><span>|</span>
           <a href="#portfolio" class="footer__link">Portfolio </a><span>|</span>
           <a href="#contact" class="footer__link">Contact</a>
