@@ -10,12 +10,10 @@ get_header(); ?>
 <div class="content">
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
-				<div class="error-page">
-					<h1>404</h1>
-					<p>Sorry, nothing to see here. Please click <a href="<?php get_site_url(); ?>/">here</a> to get you back home!</p>
-				</div>
-			</div>
+			<div class="col-12 error-page">				
+				<h1>404</h1>
+				<p>Sorry, nothing to see here. Please click <a href="<?php get_site_url(); ?>/">here</a> to get you back home!</p>
+			</div>			
 		</div>
 	</div>
 </div>
