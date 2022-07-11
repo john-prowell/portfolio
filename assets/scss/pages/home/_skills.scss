@@ -9,6 +9,19 @@
       }
     }
 
+    ul {
+      @include breakpoint(md) {
+        columns: 2;
+        li {
+          padding-right: 1rem;
+        }
+      }
+
+      @include breakpoint(lg) {
+        columns: 3;
+      }
+    }
+
     &-certs {
       &--icon {
         svg {
