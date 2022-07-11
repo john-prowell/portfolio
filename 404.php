@@ -7,14 +7,14 @@
 
 get_header(); ?>
 
-<div id="post-0" class="content error404 not-found">
-	<h1 class="entry-title"><?php esc_html_e( 'Not found', 'portfolio' ); ?></h1>
-	<div class="entry-content">
-		<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'portfolio' ); ?></p>
-		<div>
-		
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<h1>404</h1>
+			<p>Sorry, nothing to see here. Please click <a href="<?php get_site_url(); ?>">here</a> to get you back home!</p>
 		</div>
-	</div><!-- /.entry-content -->
-</div><!-- /#post-0 -->
+	</div>
+</div>
+
 <?php
 get_footer();
