@@ -10,17 +10,41 @@
     }
 
     ul {
-      margin-bottom: 0.5rem;
       @include breakpoint(md) {
         columns: 2;
-        li {
-          padding-right: 1rem;
-          margin-bottom: 0.75rem;
-        }
       }
 
       @include breakpoint(lg) {
         columns: 3;
+      }
+
+      li {
+        display: inline-block;
+        list-style: none;
+        padding-right: 1rem;
+        margin-bottom: 0.75rem;
+        position: relative;
+
+        &::before {
+          color: $blue;
+          /* color of bullet or square */
+
+          content: '\002B';
+          /* Unicode of character to precede the list item */
+
+          display: inline-block;
+          font-size: 1em;
+          /* use em or % */
+
+          left: -1.1225em;
+          /* use em, line up bullet flush with left hand side */
+
+          position: absolute;
+          /* Set the bullet positioned absolutely top left */
+
+          top: 0em;
+          /* use em or % */
+        }
       }
     }
 
