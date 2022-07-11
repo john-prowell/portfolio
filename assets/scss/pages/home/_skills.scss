@@ -10,6 +10,7 @@
     }
 
     ul {
+      padding-left: 1rem;
       @include breakpoint(md) {
         columns: 2;
       }
