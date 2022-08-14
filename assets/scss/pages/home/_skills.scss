@@ -1,26 +1,13 @@
 .skills {
-  &__dmarketing {
-    &--heading {
-      background-color: $light-grey;
-      padding: 1.5rem;
-
-      h4 {
-        color: $blue;
-      }
-    }
-
+  &__experience-list {
     ul {
       padding-left: 1rem;
       @include breakpoint(md) {
         columns: 2;
       }
 
-      @include breakpoint(lg) {
-        columns: 3;
-      }
-
       li {
-        display: inline-block;
+        display: block;
         list-style: none;
         padding-right: 1rem;
         margin-bottom: 0.75rem;
@@ -48,38 +35,38 @@
         }
       }
     }
+  }
 
-    &-certs {
-      &--icon {
-        svg {
-          margin-right: 0.3rem;
-          color: $blue !important;
-          fill: $blue;
-          width: 1.5rem !important;
-          height: 1.5rem !important;
-        }
-      }
-
-      a {
-        color: $text-color;
-        transition: color 0s ease;
-        &:hover {
-          color: $blue;
-        }
-      }
-
-      &--name {
-        font-size: 1.1rem;
+  &__certifications {
+    &--icon {
+      svg {
+        margin-right: 0.3rem;
+        color: $blue !important;
+        fill: $blue;
+        width: 1.5rem !important;
+        height: 1.5rem !important;
       }
     }
 
-    &--examples {
-      a {
-        color: $text-color;
-        transition: color 0s ease;
-        &:hover {
-          color: $blue;
-        }
+    a {
+      color: $text-color;
+      transition: color 0s ease;
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    &--name {
+      font-size: 1.1rem;
+    }
+  }
+
+  &--examples {
+    a {
+      color: $text-color;
+      transition: color 0s ease;
+      &:hover {
+        color: $blue;
       }
     }
   }
@@ -101,7 +88,7 @@
   }
 
   &__list {
-    padding: 2rem 0 1rem;
+    // padding: 2rem 0 1rem;
   }
 
   &__item {

@@ -2,151 +2,52 @@
   <div class="section__header">
     <h2 class="section__heading">My Skills</h2>
     <p class="section__heading--sub">
-      Brief list of skills & certifications.
+      Brief list of skills and software.
     </p>
   </div>
-
-  <div class="skills__dmarketing">
-    <div class="container-fluid skills__dmarketing--heading">
-      <div class="row">
-        <div class="col-12">
-        <h4 class="text-center">Digital Marketing</h4>        
-        </div>
-      </div>
-    </div>
-
-    <div class="container my-4">
-      <div class="row">
-        <div class="col-12">          
-            <h5 class="text-center mb-3">Experience</h5>
-            <?php 
-            // Check rows exists.
-            if( have_rows('dm_experience') ): ?>
-            <ul>
-            <?php
-            // Loop through rows.
-            while( have_rows('dm_experience') ) : the_row();  
-              // Load sub field value.
-              $expItem = get_sub_field('dm_exp_item');
-              // Do something...
-              ?>        
-            <li><?php echo $expItem ?></li>
-            <?php    
-            endwhile;?>                
-          </ul>
-          <?php endif; ?>
-        </div>
-      </div>
-    </div>
-
-  <div class="container my-4">
-    <div class="row">
-      <h5 class="text-center mb-3">Certifications</h5>      
-      <div class="d-flex justify-content-between flex-wrap">
-
-  <?php
-// Check rows exists.
-if( have_rows('certifications') ):
-  
-  // Loop through rows.
-  while( have_rows('certifications') ) : the_row();
-  
-    // Load sub field value.
-    $certName = get_sub_field('cert_name');
-    $certIcon = get_sub_field('cert_icon');
-    $certLink =  get_sub_field('cert_link');
-    // Do something...
-    ?>
-
-    <div class="skills__dmarketing-certs mb-3">
-      <div class="skills__dmarketing-certs--icon">
-        <svg>
-          <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#<?php echo $certIcon ?>"></use>
-        </svg>
-        <a class="skills__certs--name" href="<?php echo esc_url($certLink) ?>" target="_blank">
-          <?php echo $certName ?>
-        </a>
-      </div>
-    </div>        
-        
-    <?php    
-    endwhile;
-    endif;
-    ?>
-
-  </div>
-</div>
-  </div>
-
-<?php
-// Check rows exists.
-if( have_rows('dm_files') ): ?>
-
-<div class="container skills__dmarketing--examples mt-3">
-  <div class="row">
-    <h5 class="text-center mb-3">Example Campaign</h5>
-
-<?php  
-  // Loop through rows.
-  while( have_rows('dm_files') ) : the_row();  
-  // Do something...
-
-$link = get_sub_field('dm_file_link');
-
-if( $link ): 
-    $link_url = $link['url'];
-    $link_title = $link['title'];
-    $link_target = $link['target'] ? $link['target'] : '_self';
-    ?>
-   
-      <a class="d-flex justify-content-center" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-      
-<?php endif; ?>
-
-    <!-- <div class="skills__dmarketing--ppc d-flex justify-content-center mt-3">
-      <a class="d-flex" href="<?php echo esc_attr($url); ?>" title="<?php echo esc_attr($title); ?>">
-        <img class="pe-2" src="<?php echo esc_attr($icon); ?>" />
-        <span><?php echo esc_html($title); ?></span>
-      </a>       
-    </div> -->
-
-  <?php    
-   endwhile;
-   endif;
-  ?>
-    
-    </div>
-  </div>
-
-</div> <!--skills__dmarketing -->
-
-  
-
-<div class="container-fluid skills__web mb-3">
+  <!-- Experience List -->
+  <div class="container my-4 skills__experience-list">
     <div class="row">
       <div class="col-12">
-      <h4 class="text-center">Web Development</h4>        
+        <h5 class="text-center mb-3">Experience</h5>
+        <?php 
+          // Check rows exists.
+          if( have_rows('experience_list') ): ?>
+        <ul>
+          <?php
+            // Loop through rows.
+            while( have_rows('experience_list') ) : the_row();  
+              // Load sub field value.
+              $experienceItem = get_sub_field('experience_item');
+              // Do something...
+              ?>        
+          <li><?php echo $experienceItem ?></li>
+          <?php    
+            endwhile;?>                
+        </ul>
+        <?php endif; ?>
       </div>
     </div>
   </div>
-
-
-<div class="container">      
-  <div class="row skills__list">
-    
-    <?php
-// Check rows exists.
-if( have_rows('skill_list') ):
-  
-  // Loop through rows.
-  while( have_rows('skill_list') ) : the_row();
-
-        // Load sub field value.
-        $skillName = get_sub_field('skill_name');
-        $skillIcon = get_sub_field('skill_icon');  
-        // Do something...
-        ?>
-
+  <div class="container">
+  <hr>
+  </div>
+  <!-- Skills Lists with Icons -->
+  <div class="container my-4">    
+    <div class="row skills__list">
+      <h5 class="text-center mb-3">Skills</h5>
+      <?php
+        // Check rows exists.
+        if( have_rows('skill_list') ):
+          
+          // Loop through rows.
+          while( have_rows('skill_list') ) : the_row();
+        
+                // Load sub field value.
+                $skillName = get_sub_field('skill_name');
+                $skillIcon = get_sub_field('skill_icon');  
+                // Do something...
+                ?>
       <div class="col-6 col-md-4 col-lg-3 skills__item">
         <div class="skills__icon">
           <svg>
@@ -155,11 +56,46 @@ if( have_rows('skill_list') ):
         </div>
         <p class="skills__name"><?php echo $skillName ?></p>
       </div>
-
       <?php    
-    endwhile;
-    endif;
-    ?>
+        endwhile;
+        endif;
+        ?>
     </div>
-</div>  
+  </div>
+  <div class="container"><hr></div>
+  <!-- Certifications -->
+  <div class="container my-4">
+    <div class="row">
+      <h5 class="text-center mb-3">Certifications</h5>
+      <div class="d-flex justify-content-between flex-wrap">
+        <?php
+          // Check rows exists.
+          if( have_rows('certifications') ):
+            
+            // Loop through rows.
+            while( have_rows('certifications') ) : the_row();
+            
+              // Load sub field value.
+              $certName = get_sub_field('cert_name');
+              $certIcon = get_sub_field('cert_icon');
+              $certLink =  get_sub_field('cert_link');
+              // Do something...
+              ?>
+        <div class="skills__certifications mb-3">
+          <div class="skills__certifications--icon">
+            <svg>
+              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#<?php echo $certIcon ?>"></use>
+            </svg>
+            <a class="skills__certifications--name" href="<?php echo esc_url($certLink) ?>" target="_blank">
+            <?php echo $certName ?>
+            </a>
+          </div>
+        </div>
+        <?php    
+          endwhile;
+          endif;
+          ?>
+      </div>
+    </div>
+  </div>
 </section>
