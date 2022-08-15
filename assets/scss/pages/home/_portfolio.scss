@@ -15,21 +15,7 @@
     }
   }
 
-  &__card-links {
-    // display: flex;
-    padding: 0.5rem;
-    text-align: center;
-    & svg {
-      fill: $dark-grey;
-      width: 2rem;
-      height: 2rem;
-    }
+  .card-text {
+    color: $text-color;
   }
-
-  //   & a {
-  //     &:not(:last-child) {
-  //       margin-right: 0.75rem;
-  //     }
-  //   }
-  // }
 }
