@@ -48,8 +48,8 @@
                 $skillIcon = get_sub_field('skill_icon');  
                 // Do something...
                 ?>
-      <div class="col-6 col-md-4 col-lg-3 skills__item">
-        <div class="skills__icon" data-aos="flip-up" data-aos-duration="1000">
+      <div class="col-6 col-md-4 col-lg-3 skills__item" data-aos="fade-down-right" data-aos-duration="1000">
+        <div class="skills__icon">
           <svg>
             <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#<?php echo $skillIcon ?>"></use>
           </svg>
@@ -82,7 +82,7 @@
               // Do something...
               ?>
         <div class="skills__certifications mb-3">
-          <div class="skills__certifications--icon" data-aos="flip-up" data-aos-duration="1000">
+          <div class="skills__certifications--icon" data-aos="fade-up-left" data-aos-duration="1000">
             <svg>
               <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#<?php echo $certIcon ?>"></use>
             </svg>
