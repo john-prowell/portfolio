@@ -3,6 +3,7 @@
 function load_styles() {
     wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '5.1.3');
     wp_enqueue_style( 'twenty-twenty-styles', get_template_directory_uri() . '/assets/css/twentytwenty.css' , array(), '1.0.0');
+    wp_enqueue_style( 'aos-styles', get_template_directory_uri() . '/assets/css/aos.css' , array(), '1.0.0');
     wp_enqueue_style( 'custom-styles', get_template_directory_uri() . '/assets/css/main.css' , array(), '1.0.0');
     wp_enqueue_style( 'custom-styles-map', get_template_directory_uri() . '/assets/css/main.css.map', array(), '1.0.0');
 }
@@ -10,6 +11,8 @@ add_action('wp_enqueue_scripts', 'load_styles');
 
 function load_scripts() {   
 
+		// AOS
+    wp_enqueue_script('aos_scripts', get_template_directory_uri() . '/assets/js/aos.js', array('jquery'), '4.0.2', true);
 		// Zenscroll
     wp_enqueue_script('zenscroll_scripts', get_template_directory_uri() . '/assets/js/zenscroll-min.js', array('jquery'), '4.0.2', true);
 		// TwentyTwenty Image Comparison Slider		

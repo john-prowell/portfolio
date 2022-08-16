@@ -10,7 +10,7 @@
 
   <div class="container contact__container">
     <div class="row">
-      <div class="col-md-8 offset-md-2 contact__form">
+      <div class="col-md-8 offset-md-2 contact__form" data-aos="zoom-in-left" data-aos-duration="1000">
         <?php $code = get_field('contact_code');
         echo do_shortcode($code);
         ?>

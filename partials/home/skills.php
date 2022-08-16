@@ -1,12 +1,12 @@
 <section id="skills" class="skills">
-  <div class="section__header">
+  <div class="section__header" data-aos="fade-left" data-aos-duration="1000">
     <h2 class="section__heading">My Skills</h2>
     <p class="section__heading--sub">
       Brief list of skills and software.
     </p>
   </div>
   <!-- Experience List -->
-  <div class="container my-4 skills__experience-list">
+  <div class="container my-4 skills__experience-list" data-aos="fade-up" data-aos-duration="1000">
     <div class="row">
       <div class="col-12">
         <h5 class="text-center mb-3">Experience</h5>
@@ -49,7 +49,7 @@
                 // Do something...
                 ?>
       <div class="col-6 col-md-4 col-lg-3 skills__item">
-        <div class="skills__icon">
+        <div class="skills__icon" data-aos="flip-up" data-aos-duration="1000">
           <svg>
             <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#<?php echo $skillIcon ?>"></use>
           </svg>
@@ -82,7 +82,7 @@
               // Do something...
               ?>
         <div class="skills__certifications mb-3">
-          <div class="skills__certifications--icon">
+          <div class="skills__certifications--icon" data-aos="flip-up" data-aos-duration="1000">
             <svg>
               <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#<?php echo $certIcon ?>"></use>
             </svg>

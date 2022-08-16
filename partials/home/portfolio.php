@@ -32,7 +32,7 @@
         <a href="#" data-bs-toggle="modal" data-bs-target="<?php echo '#modal-id-' . $postid_str ?>">
           <?php include 'modal.php'; ?>               
           <?php } ?>
-          <div class="card mx-auto h-100">
+          <div class="card mx-auto h-100" data-aos="zoom-in">
             <?php 
               $image = get_field('website_image');
               if( !empty( $image ) ): ?>
@@ -70,7 +70,7 @@
       <h3 class="text-center my-3">Graphic Recreations & Design</h3>
       <?php while ( $graphic_query->have_posts() ) : $graphic_query->the_post(); ?>
       <div class="col-12 col-md-6 col-lg-3 my-3">
-        <div class="card">
+        <div class="card" data-aos="zoom-out" data-aos-duration="1000">
           <div class="twentytwenty-container card-img-top">
             <!-- The before image is first -->
             <img src="<?php the_field('before_image') ?>" />

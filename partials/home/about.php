@@ -1,6 +1,6 @@
 <!-- About Section -->
 
-<section id="about" class="about">
+<section data-aos="fade-right" data-aos-duration="1000" id="about" class="about">
 
       <div class="section__header">
         <h2 class="section__heading">About Me</h2>
