@@ -66,3 +66,5 @@ function navHighlighter() {
 jQuery(window).load(function () {
   jQuery('.twentytwenty-container').twentytwenty();
 });
+
+AOS.init();
