@@ -6,6 +6,7 @@
       My web development projects & graphic design.
     </div>
   </div>
+  <!-- Websites -->
   <?php
     $args = array(
         'post_type' => 'website',
@@ -23,7 +24,7 @@
         <?php 
           $link = get_field('website_link');
           if( $link ) { ?>  
-        <a href="<?php echo esc_url( $link ); ?>" target="_blank">
+        <a href="<?php echo esc_url( $link ); ?>" target="_blank" rel="noreferrer">
           <?php } else { ?>
           <?php $postid = get_the_ID();
             $postid_str = strval($postid);
