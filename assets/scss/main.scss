@@ -23,24 +23,13 @@
 @import 'pages/404';
 @import 'pages/thank-you';
 
-// /**
-//  * WordPress customizationn
-//  */
-/* If WP-Adminbar is visible */
-body.admin-bar {
-  #header.fixed-top {
+/**
+ * WordPress Customization
+ * If WP-Adminbar is visible
+ * Pushes site down 32px so wp-adminbar won't overlap
+*/
+body#admin-bar {
+  #header {
     top: 32px;
-  }
-
-  .edit-link a {
-    color: #fff !important;
-    font-weight: normal !important;
-    text-decoration: none !important;
-
-    &::before {
-      content: '\270E';
-      display: inline-block;
-      margin-right: 5px;
-    }
   }
 }
