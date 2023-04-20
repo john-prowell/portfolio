@@ -50,22 +50,25 @@
         background-color: $blue;
       }
 
+      .nav__icon {
+        fill: $blue;
+        width: 2rem;
+        height: 2rem;
+        margin-bottom: 0.8rem;
+      }
+
       @media (hover: hover) and (pointer: fine) {
         &:hover {
           background-color: $blue;
+          .nav__icon {
+            fill: $light-grey;
+          }
+        }
+
+        @include breakpoint(md) {
+          padding: 1rem 2rem;
         }
       }
-
-      @include breakpoint(md) {
-        padding: 1rem 2rem;
-      }
-    }
-
-    &__icon {
-      fill: $light-grey;
-      width: 2rem;
-      height: 2rem;
-      margin-bottom: 0.8rem;
     }
   }
 }
