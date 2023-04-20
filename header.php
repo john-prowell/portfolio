@@ -28,9 +28,6 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <!-- <svg class="logo">
-        <use xlink:href="img/sprite.svg#logo"></use>
-      </svg> -->
       <?php if(is_front_page()) {      
         get_template_part('partials/front-page-nav'); 
           } else {

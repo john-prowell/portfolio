@@ -48,6 +48,9 @@
 
       &.active {
         background-color: $blue;
+        .nav__icon {
+          fill: $light-grey;
+        }
       }
 
       .nav__icon {
@@ -72,10 +75,3 @@
     }
   }
 }
-
-// .logo {
-//   width: 5.5rem;
-//   height: 5.5rem;
-//   fill: $light-grey;
-//   margin-left: 2rem;
-// }
