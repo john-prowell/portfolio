@@ -27,9 +27,9 @@
     align-items: center;
     justify-content: space-between;
 
-    @include breakpoint(md) {
-      justify-content: center;
-    }
+    // @include breakpoint(md) {
+    //   justify-content: center;
+    // }
 
     &__link {
       display: flex;
