@@ -62,9 +62,9 @@
         ?>
     </div>
   </div>
-  <div class="container"><hr></div>
+  <!-- <div class="container"><hr></div> -->
   <!-- Certifications -->
-  <div class="container my-4">
+  <!-- <div class="container my-4">
     <div class="row">
       <h5 class="text-center mb-3">Certifications</h5>
       <div class="d-flex justify-content-between flex-wrap">
@@ -97,5 +97,5 @@
           ?>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
