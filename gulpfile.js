@@ -32,7 +32,7 @@ function purgecssTask() {
 // Browser Sync
 function browsersyncServe(cb) {
   browsersync.init({
-    proxy: 'http://prowelldigital.local' // change to your local server site url
+    proxy: 'http://prowelldigital.abc' // change to your local server site url
   });
   cb();
 }
