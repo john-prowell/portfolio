@@ -1,53 +1,83 @@
 // Hero Section - Homepage
 
 .hero {
-  height: 100vh;
-  width: 100%;
-  background-image: linear-gradient(
-      rgba(104, 173, 206, 0.25),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url(../../assets/images/ad_background.jpg);
-  background-size: cover;
-  background-position: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: #f8f9fc;
   color: $light-grey;
-  position: relative;
 
-  @include breakpoint(md) {
-    height: 100vh;
+  @include breakpoint(lg) {
+    height: 700px;
+  }
+
+  &__photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+    @include breakpoint(lg) {
+      margin-bottom: 0;
+    }
+
+    img {
+      max-width: 75%;
+      border-radius: 50%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1),
+        0 20px 40px rgba(255, 255, 255, 0.15);
+      border: 14px solid #fff;
+      outline: red dashed 1px;
+      justify-content: center;
+
+      @include breakpoint(md) {
+        max-width: 100%;
+      }
+    }
   }
 
   &__content {
+    color: #1f1f25;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
 
-  &__heading {
-    color: $blue;
-    margin-bottom: 1.25rem;
-    font-size: 5rem;
-    line-height: 1;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-
-    @include breakpoint(sm) {
+    .intro-text {
+      color: #1f1f25;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
       display: block;
-      margin-bottom: 1rem;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    &--sub {
-      margin-bottom: 1.75rem;
-      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-      font-size: 1.75rem;
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+
+      @include breakpoint(md) {
+        font-size: 3rem;
+      }
+
+      @include breakpoint(xl) {
+        font-size: 3.75rem;
+      }
 
       span {
-        color: $blue;
+        color: #f9004d;
+      }
+    }
+
+    .contact {
+      align-self: center;
+      font-size: 1.5rem;
+      transition: 0.3s;
+
+      &:hover {
+        color: #f9004d;
       }
     }
   }
