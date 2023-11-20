@@ -1,5 +1,5 @@
 <!-- About Section -->
-<section data-aos="fade-right" data-aos-duration="1000" id="about" class="about">
+<section data-aos="fade-right" data-aos-duration="1000" id="about" class="about" data-bs-dismiss="offcanvas" data-bs-target>
   <div class="section__header">
     <h2 class="section__heading">About Me</h2>
     <p class="section__heading--sub">
