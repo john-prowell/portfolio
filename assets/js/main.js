@@ -68,3 +68,15 @@ jQuery(window).load(function () {
 });
 
 AOS.init();
+
+// To close Boostrap Off Canvas menu when clicking on anchor links
+
+function close_offcanvas() {
+  var element1 = document.getElementById('eff_nav_toggler');
+  element1.classList.remove('collapsed');
+  var element2 = document.getElementById('navbarSupportedContent');
+  element2.classList.remove('show');
+  document
+    .getElementById('eff_nav_toggler')
+    .setAttribute('aria-expanded', 'false');
+}
