@@ -1,11 +1,8 @@
 // Contact Form
 
 .contact {
-  color: $light-grey;
-
-  &__container {
-    margin: 3rem auto;
-  }
+  padding: 2.5rem 0;
+  color: $text-color;
 
   &__info {
     background: linear-gradient(-62deg, #0984e3, #49acf8);

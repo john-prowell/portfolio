@@ -1,5 +1,4 @@
 #header {
-  // height: 6rem;
   font-size: 0.75rem;
   font-weight: 600;
   width: 100%;
@@ -20,58 +19,42 @@
     background-color: $dark-grey;
   }
 
-  .nav {
+  nav.navbar {
+    padding: 0.75rem 0;
+
+    @include breakpoint(md) {
+      padding: 0.75rem 4rem;
+    }
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    text-transform: uppercase;
+    color: $text-color;
 
-    // @include breakpoint(md) {
-    //   justify-content: center;
-    // }
+    img {
+      border-radius: 50%;
+      border: $blue 2px solid;
+      margin-right: 1rem;
+    }
+  }
 
-    &__link {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
+  li.nav-item {
+    a.nav-link {
+      padding: 2.2rem 3rem;
+      display: inline-block;
+      font-size: 1.1rem;
+      color: $text-color;
       text-transform: uppercase;
-      // color: $light-grey;
-      color: #1d1d24;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
-      transition: all 0.3s;
-      height: 100%;
-      position: relative;
-      overflow: hidden;
+      letter-spacing: 1px;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
 
-      &.active {
-        background-color: $blue;
-        .nav__icon {
-          fill: $light-grey;
-        }
-      }
-
-      .nav__icon {
-        fill: $blue;
-        width: 2rem;
-        height: 2rem;
-        margin-bottom: 0.8rem;
-      }
-
-      @media (hover: hover) and (pointer: fine) {
-        &:hover {
-          background-color: $blue;
-          color: $white;
-          .nav__icon {
-            fill: $light-grey;
-          }
-        }
-
-        @include breakpoint(md) {
-          padding: 1rem 2rem;
-        }
-      }
+    a:last-of-type {
+      padding-right: 0;
     }
   }
 }

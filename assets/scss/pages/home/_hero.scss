@@ -3,20 +3,27 @@
 .hero {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 2rem 0;
-  background-color: #f8f9fc;
+  padding: 3rem 0;
+  margin-top: 85px;
   color: $light-grey;
+  background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='$dark-grey' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  // background-position: center;
+  // background-size: cover;
+
+  @include breakpoint(md) {
+    padding: 8rem 0;
+  }
 
   @include breakpoint(lg) {
-    height: 700px;
+    // height: 700px;
   }
 
   &__photo {
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    align-items: center;
     transition: all 0.3s;
+    margin-bottom: 1.25rem;
 
     @include breakpoint(lg) {
       margin-bottom: 0;
@@ -57,18 +64,20 @@
       color: #1f1f25;
       font-size: 1rem;
       text-transform: uppercase;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       display: block;
       margin-bottom: 20px;
     }
 
     h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-bottom: 1rem;
+      line-height: 26pt;
 
       @include breakpoint(md) {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        line-height: 1.1;
       }
 
       @include breakpoint(xl) {
@@ -80,7 +89,7 @@
       }
     }
 
-    .contact {
+    .cta {
       align-self: center;
       font-size: 1.5rem;
       transition: 0.3s;

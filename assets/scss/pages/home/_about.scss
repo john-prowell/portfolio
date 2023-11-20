@@ -1,16 +1,36 @@
 // About
 
 .about {
-  &__container {
-    margin: 2rem auto;
+  padding: 2.5rem 0;
+
+  &__text {
+    font-size: 1.1rem;
+    line-height: 23pt;
   }
 
-  &__profile {
-    flex-direction: column;
-    align-items: center;
-  }
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
 
-  &__profile-text {
-    font-size: 1rem;
+    &-skill {
+      line-height: 1.5;
+      margin: 0;
+      font-family: inherit;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      font-weight: 600;
+      background-color: $light-grey;
+      color: $text-color;
+      transition: all 0.3s ease;
+      border: 1px dashed $pink;
+
+      &:hover {
+        background-color: $pink;
+        color: $white;
+      }
+    }
   }
 }

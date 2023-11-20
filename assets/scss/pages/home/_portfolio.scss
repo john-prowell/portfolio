@@ -1,9 +1,9 @@
 // Portfolio
 
 .portfolio {
+  padding: 2.5rem 0;
+  background-color: $light-grey;
   &__container {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 
   .card {
