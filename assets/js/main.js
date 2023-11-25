@@ -67,7 +67,7 @@ jQuery(window).load(function () {
   jQuery('.twentytwenty-container').twentytwenty();
 });
 
-AOS.init();
+AOS.init({ disable: 'mobile', startEvent: 'DOMContentLoaded' });
 
 // --- Mobile Nav Menu
 const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont');
