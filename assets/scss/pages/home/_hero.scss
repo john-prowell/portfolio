@@ -7,8 +7,7 @@
   margin-top: 85px;
   color: $light-grey;
   background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='$dark-grey' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-  // background-position: center;
-  // background-size: cover;
+  border-bottom: 1px dashed $pink;
 
   @include breakpoint(md) {
     padding: 8rem 0;
@@ -16,37 +15,6 @@
 
   @include breakpoint(lg) {
     // height: 700px;
-  }
-
-  &__photo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
-    margin-bottom: 1.25rem;
-
-    @include breakpoint(lg) {
-      margin-bottom: 0;
-    }
-
-    :hover {
-      transform: translateX(-50%);
-      box-shadow: 0 10px 20px rgba(86, 86, 198, 0.3);
-    }
-
-    img {
-      max-width: 75%;
-      border-radius: 50%;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1),
-        0 20px 40px rgba(255, 255, 255, 0.15);
-      border: 14px solid #fff;
-      outline: red dashed 1px;
-      justify-content: center;
-
-      @include breakpoint(md) {
-        max-width: 100%;
-      }
-    }
   }
 
   &__content {
@@ -71,22 +39,19 @@
 
     h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.5rem;
+      font-size: clamp(1.75rem, 0.2143rem + 3.9286vw, 3.75rem);
       margin-bottom: 1rem;
-      line-height: 26pt;
 
-      @include breakpoint(md) {
-        font-size: 2.5rem;
-        line-height: 1.1;
-      }
-
-      @include breakpoint(xl) {
-        font-size: 3.75rem;
-      }
-
-      span {
+      span.title-1 {
         color: #f9004d;
+        display: inline-block;
       }
+    }
+
+    h2 {
+      color: $text-color;
+      font-size: clamp(1.25rem, 0.7143rem + 1.4286vw, 2rem);
+      margin-bottom: 1rem;
     }
 
     .cta {
@@ -100,6 +65,37 @@
 
       &:hover {
         color: #f9004d;
+      }
+    }
+  }
+
+  &__photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    margin-bottom: 1.25rem;
+
+    @include breakpoint(lg) {
+      margin-bottom: 0;
+    }
+
+    :hover {
+      transform: translateX(-50%);
+      box-shadow: 0 10px 20px rgba(86, 86, 198, 0.3);
+    }
+
+    img {
+      max-width: 75%;
+      border-radius: 50%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1),
+        0 20px 40px rgba(255, 255, 255, 0.15);
+      border: 7px solid #fff;
+      outline: red dashed 1px;
+      justify-content: center;
+
+      @include breakpoint(md) {
+        max-width: 100%;
       }
     }
   }

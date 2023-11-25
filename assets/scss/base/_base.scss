@@ -5,6 +5,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *,
@@ -48,4 +49,8 @@ h5,
 h6 {
   font-family: $text-font-secondary;
   margin: 0;
+}
+
+li {
+  list-style: none;
 }
