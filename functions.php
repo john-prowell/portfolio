@@ -28,7 +28,6 @@ function load_scripts() {
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
 
-
 // Register Custom Post Type
 function website_post_type() {
 
