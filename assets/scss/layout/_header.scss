@@ -126,15 +126,15 @@
     a {
       display: block;
       text-decoration: none;
-      padding: 2.5rem 3rem;
+      padding: 1.5rem 1rem;
       font-size: 1.3rem;
       color: $text-color;
-      text-align: right;
+      text-align: center;
       border-bottom: 1px solid #eee;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
-      transition: color 0.3s;
+      transition: all 0.3s;
 
       &:hover {
         color: $blue;
