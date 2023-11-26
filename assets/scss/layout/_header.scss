@@ -12,6 +12,10 @@
     padding: 0 1rem;
 
     @include breakpoint(md) {
+      padding: 1rem 2.5rem;
+    }
+
+    @include breakpoint(lg) {
       padding: 1rem 5rem;
     }
   }
@@ -44,12 +48,14 @@
     object-position: center;
     display: block;
   }
+
   &__logo-sub {
     font-size: 1.3rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;
   }
+
   &__links {
     display: none;
     margin: 0;
