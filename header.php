@@ -46,7 +46,7 @@
             </li>
             <li class="header__link-wrapper">
               <a href="#portfolio" class="header__link">
-                Porfolio
+                Portfolio
               </a>
             </li>
             <li class="header__link-wrapper">
