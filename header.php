@@ -79,7 +79,7 @@
             </li>
 
             <li class="header__sm-menu-link">
-              <a href="#portfolio"> Porfolio </a>
+              <a href="#portfolio"> Portfolio </a>
             </li>
 
             <li class="header__sm-menu-link">
