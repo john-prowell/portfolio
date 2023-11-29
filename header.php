@@ -39,13 +39,13 @@
         <div class="header__main">
           <ul class="header__links">
             <li class="header__link-wrapper">
-              <a href="<?php echo home_url('/'); ?>" class="header__link"> Home </a>
+              <a href="<?php echo esc_url(home_url('/')); ?>" class="header__link"> Home </a>
             </li>
             <li class="header__link-wrapper">
-              <a href="<?php echo home_url(); ?>#about" class="header__link">About </a>
+              <a href="<?php echo esc_url(home_url('/')); ?>#about" class="header__link">About </a>
             </li>
             <li class="header__link-wrapper">
-              <a href="<?php echo home_url(); ?>#portfolio" class="header__link">
+              <a href="<?php echo esc_url(home_url('/')); ?>#portfolio" class="header__link">
                 Portfolio
               </a>
             </li>
@@ -71,19 +71,19 @@
         <div class="header__sm-menu-content">
           <ul class="header__sm-menu-links">
             <li class="header__sm-menu-link">
-              <a href="<?php site_url(); ?>"> Home </a>
+            <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
             </li>
 
             <li class="header__sm-menu-link">
-              <a href="#about"> About </a>
+            <a href="<?php echo esc_url(home_url('/#about')); ?>">About</a>
             </li>
 
             <li class="header__sm-menu-link">
-              <a href="#portfolio"> Portfolio </a>
+            <a href="<?php echo esc_url(home_url('/#portfolio')); ?>">Portfolio</a>
             </li>
 
             <li class="header__sm-menu-link">
-              <a href="#contact"> Contact </a>
+            <a href="<?php echo esc_url(home_url('/#contact')); ?>">Contact</a>
             </li>
           </ul>
         </div>

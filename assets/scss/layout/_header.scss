@@ -120,11 +120,11 @@
     &--active {
       visibility: visible;
       opacity: 1;
+    }
 
-      @include breakpoint(md) {
-        visibility: hidden;
-        opacity: 0;
-      }
+    @include breakpoint(md) {
+      visibility: hidden;
+      opacity: 0;
     }
   }
 
