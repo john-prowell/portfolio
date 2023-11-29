@@ -34,23 +34,23 @@
               class="header__logo-img"
             />
           </div>
-          <span class="header__logo-sub">John Prowell</span>
+          <a href="<?php echo home_url(); ?>" class="header__logo-sub">John Prowell</a>
         </div>
         <div class="header__main">
           <ul class="header__links">
             <li class="header__link-wrapper">
-              <a href="<?php site_url(); ?>" class="header__link"> Home </a>
+              <a href="<?php echo home_url(); ?>" class="header__link"> Home </a>
             </li>
             <li class="header__link-wrapper">
-              <a href="#about" class="header__link">About </a>
+              <a href="<?php echo home_url(); ?>#about" class="header__link">About </a>
             </li>
             <li class="header__link-wrapper">
-              <a href="#portfolio" class="header__link">
+              <a href="<?php echo home_url(); ?>#portfolio" class="header__link">
                 Portfolio
               </a>
             </li>
             <li class="header__link-wrapper">
-              <a href="#contact" class="header__link"> Contact </a>
+              <a href="<?php echo home_url(); ?>#contact" class="header__link"> Contact </a>
             </li>
           </ul>
           <div class="header__main-ham-menu-cont">
