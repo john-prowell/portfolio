@@ -60,7 +60,7 @@ get_header(); ?>
     <div class="row">
       <div class="col">
         <div class="project-details__tools-used">
-          <h3>Skills Used</h3>
+          <h3>Skills</h3>
           <?php
             if( have_rows('website_tools') ) { ?>
           <div class="about__skills">
