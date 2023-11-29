@@ -33,13 +33,13 @@
               alt="John Prowell logo image"
               class="header__logo-img"
             />
-          </div>
-          <a href="<?php echo home_url(); ?>" class="header__logo-sub">John Prowell</a>
+          </div>          
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="header__logo-sub">John Prowell</a>
         </div>
         <div class="header__main">
           <ul class="header__links">
             <li class="header__link-wrapper">
-              <a href="<?php echo home_url(); ?>" class="header__link"> Home </a>
+              <a href="<?php echo home_url('/'); ?>" class="header__link"> Home </a>
             </li>
             <li class="header__link-wrapper">
               <a href="<?php echo home_url(); ?>#about" class="header__link">About </a>
