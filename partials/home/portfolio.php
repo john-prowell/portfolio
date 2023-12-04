@@ -22,30 +22,17 @@
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
       <div class="col-12 col-md-6 col-lg-4 my-3">
         <?php 
-          $link = get_field('website_link');
-          if( $link ) { ?>  
-        <a href="<?php echo esc_url( $link ); ?>" target="_blank" rel="noreferrer">
-          <?php } else { ?>
-          <?php $postid = get_the_ID();
-            $postid_str = strval($postid);
-            ?>
-          <!-- Button trigger for modal -->
-        <a href="#" data-bs-toggle="modal" data-bs-target="<?php echo '#modal-id-' . $postid_str ?>">
-          <?php include 'modal.php'; ?>               
-          <?php } ?>
+          $link = get_permalink();
+        ?>
+           
+        <a href="<?php echo esc_url( $link ); ?>">
+
           <div class="card mx-auto h-100" data-aos="zoom-in">
             <?php 
               $image = get_field('website_image');
               if( !empty( $image ) ): ?>
             <img class="card-img-top img-fluid" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-            <?php endif; ?>
-            <div class="card-body">
-              <h5 class="text-center"><?php the_field('website_name') ?></h5>
-              <p class="card-text text-center">
-                <?php the_field('website_description'); ?>
-              </p>
-            </div>
-            <!-- Card Body -->              
+            <?php endif; ?>            
           </div>
           <!-- Card -->
         </a>
