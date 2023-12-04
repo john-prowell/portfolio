@@ -12,7 +12,6 @@ get_header(); ?>
     <div class="row">      
       <div class="col">
         <div class="project-hero__content">
-          <span>Case Study For:</span> 
           <h1><?php the_field('website_name');  ?></h1>
           <div class="project-details__link">
       <?php 
