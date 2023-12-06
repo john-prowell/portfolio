@@ -160,24 +160,3 @@
     border-bottom: 0;
   }
 }
-
-#about:target:before {
-  content: '';
-  display: block;
-  height: 100px;
-  margin: 0;
-}
-
-#portfolio:target:before {
-  content: '';
-  display: block;
-  height: 100px;
-  margin: 0;
-}
-
-#contact:target:before {
-  content: '';
-  display: block;
-  height: 100px;
-  margin: 0;
-}
