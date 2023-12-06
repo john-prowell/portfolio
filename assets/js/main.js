@@ -1,7 +1,7 @@
 // Zenscroll
 var defaultDuration = 777; // ms
 var edgeOffset = 90; // px
-zenscroll.setup(defaultDuration, edgeOffset);
+// zenscroll.setup(defaultDuration, edgeOffset);
 
 // Fixed header background color change on scroll
 // const headerScroll = () => {
