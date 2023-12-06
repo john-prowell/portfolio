@@ -61,14 +61,14 @@ li {
   list-style: none;
 }
 
-// #about:target:before,
-// #portfolio:target:before,
-// #contact:target:before {
-//   content: '';
-//   display: block;
-//   height: 100px;
-//   margin: 0;
-// }
+#about:target:before,
+#portfolio:target:before,
+#contact:target:before {
+  content: '';
+  display: block;
+  height: 100px;
+  margin: 0;
+}
 
 // #portfolio:target:before {
 //   content: '';
