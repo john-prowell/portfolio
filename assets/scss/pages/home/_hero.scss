@@ -42,16 +42,10 @@
       font-size: clamp(1.75rem, 0.2143rem + 3.9286vw, 3.75rem);
       margin-bottom: 1rem;
 
-      span.title-1 {
+      span.title {
         color: #f9004d;
         display: inline-block;
       }
-    }
-
-    h2 {
-      color: $text-color;
-      font-size: clamp(1.25rem, 0.7143rem + 1.4286vw, 2rem);
-      margin-bottom: 1rem;
     }
 
     .cta {

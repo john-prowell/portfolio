@@ -12,14 +12,10 @@
       <div class="col-12 col-md-9 col-xl-7 d-flex justify-content-center">
         <div class="hero__content">
           <span class="intro-text">Welcome to my world</span>
-          <h1 data-aos="zoom-in-left" data-aos-duration="1000">Hi, I’m John Prowell,<br> <span class="title-1">Wordpress Developer</span></h1>
-          <h2 class="title-2">& Production Artist.</h2>          
+          <h1 data-aos="zoom-in-left" data-aos-duration="1000">Hi, I’m John Prowell,<br> <span class="title"><?php echo get_field('hero_h3') ? get_field('hero_h3') : 'Wordpress Developer'; ?></span></h1>
           <a href="#contact" class="cta" data-aos="zoom-in-up" data-aos-duration="1500"><i class="fa-regular fa-envelope fa-lg"></i> Let's Talk</a>
         </div>        
       </div>
-
-      
-
     </div>
   </div>
 </section>
