@@ -3,10 +3,12 @@
  <!-- Content -->
 <div class="content">
 
-<?php include 'partials/home/hero.php'?>
-<?php include 'partials/home/about.php';?>
-<?php include 'partials/home/portfolio.php';?>
-<?php include 'partials/home/contact.php';?>
+<?php 
+get_template_part('partials/home/hero');
+get_template_part('partials/home/about');
+get_template_part('partials/home/portfolio');
+get_template_part('partials/home/contact');
+?>
 
 </div><!-- /Content -->
 
