@@ -60,10 +60,16 @@
       <div class="col-12 col-md-6 col-lg-3 my-3">
         <div class="card" data-aos="zoom-out" data-aos-duration="1000">
           <div class="twentytwenty-container card-img-top">
-            <!-- The before image is first -->
-            <img src="<?php the_field('before_image') ?>" />
-            <!-- The after image is last -->
-            <img src="<?php the_field('after_image') ?>" />
+            <?php
+              $before_image = get_field('before_image');
+              $after_image = get_field('after_image');
+
+              if ($before_image && $after_image) { ?>
+              <!-- The before image is first -->
+                <img src="<?php echo $before_image['url'] ?>" alt="<?php echo $before_image['alt'] ?>" />
+                <!-- The after image is last -->
+                <img src="<?php echo $after_image['url'] ?>" alt="<?php echo $after_image['alt'] ?>" />
+              <?php } ?>           
           </div>
           <div class="card-body">
             <h5 class="card-title text-center">Raster Recreation to Vector</h5>
