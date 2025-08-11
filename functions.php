@@ -35,6 +35,15 @@ require_once(get_template_directory() . '/includes/custom-post-types.php');
 // Remove WordPress Upload Image Scaling
 add_filter('big_image_size_threshold', '__return_false');
 
+// Add block theme support
+add_theme_support( 'wp-block-styles' );
+add_theme_support( 'align-wide' );
+add_theme_support( 'block-template-parts' );
+
+// Load theme blocks
+require get_template_directory() . '/blocks.php';
+
+
 // Display template name on bottom of page for dev purposes
 // Uncomment the following lines to enable this feature
 /*
